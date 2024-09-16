@@ -1,0 +1,333 @@
+<%- include('../../partial/principal/header') %>
+<body class="home-page">
+    <div id="loader">
+        <img src="/static/images/cube.gif" alt="Loading...">
+      </div>
+    <div class="main-wrapper" id="letter">
+        <div class="container">
+          <div class="row justify-content-center" 
+            style="
+            margin-top: 100px !important;
+            margin-bottom: 80px;
+            ">
+            <div class="col-md-7 text-center heading-section ftco-animate">
+              <span class="subheading">Sweeten your world with us</span>
+            </div>
+          </div>
+          <div class="product-container">
+            <div class="product-categories">
+              <h3>Product Categories</h3>
+              <ul>
+                  <li><a href="/letter/query?searchWord=&category=">All</a></li>
+                  <li><a href="/letter/query?searchWord=&category=2">Mini Cakes</a></li>
+                  <li><a href="/letter/query?searchWord=&category=3">Family Cakes</a></li>
+                  <li><a href="/letter/query?searchWord=&category=4">Desserts</a></li>
+                  <li><a href="/letter/query?searchWord=&category=5">Sweet Peruvian Snacks</a></li>
+                  <li><a href="/letter/query?searchWord=&category=6">Salty Peruvian Snacks</a></li>
+                  <li><a href="/letter/query?searchWord=&category=7">Personalized Cakes</a></li>
+                  <li><a href="/letter/query?searchWord=&category=1">Standard Cakes</a></li>
+              </ul>
+            </div>
+            <div class="product-content">
+              <form class="search-form-product" action="/letter/query" method="GET">
+                <div class="input-container" id="search-container">
+                  <i class="fas fa-search"></i>
+                  <input
+                    type="text"
+                    name="searchWord"
+                    id="search-input"
+                    value="<%= typeof searchWord !== 'undefined' ? searchWord : '' %>"
+                    placeholder="Search product"
+                  />
+                </div>
+               
+                <button class="btn" type="submit">Search</button>
+              </form>
+          
+              <div class="container-card">
+                <% if (selectedCategory !== '5' && selectedCategory !== '6') { %>
+                  <% products.forEach(product => { %>
+                  <div class="card" data-product-id="<%= product.id %>">
+                    <figure>
+                      <img src="<%= product.image_url %>" class="lazy-load" />
+                    </figure>
+                    <div class="contenido-card">
+                      <h3><%= product.name %></h3>
+                      <p>
+                        <span><%= product.category %></span><br />
+                      
+                      </p>
+                      <a href="/detail/<%= product.id %>">See More</a>
+                    </div>
+                  </div>
+                  <% }) %>
+                <% } %>
+                <% if (selectedCategory && selectedCategory.toString() === '5') { %>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>QUANTITY</th>
+                            <th>TYPE</th>
+                            <th>SIMPLE</th>
+                            <th>PREMIUM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25</td>
+                            <td>Alfajorcitos Clásicos</td>
+                            <td>$45.00</td>
+                            <td>$55.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Alfajorcitos Rellenos de Fudge de Chocolate</td>
+                            <td>$48.00</td>
+                            <td>$55.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Mini Brownies</td>
+                            <td>$45.00</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Chocotejas (Pecana, Coco o Pasas)</td>
+                            <td>$45.00</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Mini mouse de Lúcuma</td>
+                            <td>$60.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Arroz con leche</td>
+                            <td>$55.00</td>
+                            <td>$55.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Mazamorra Morada</td>
+                            <td>$55.00</td>
+                            <td>$55.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Combinado "El Clásico"</td>
+                            <td>$60.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Tartaletas de Fresa o Durazno</td>
+                            <td>$55.00</td>
+                            <td>$65.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Mini Tartaletas de Limón</td>
+                            <td>$55.00</td>
+                            <td>$65.00</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Mini Cheesecake de Fresa, Maracuyá o Lúcuma</td>
+                            <td>$50.00</td>
+                            <td>$58.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Piononitos o Brazos Gitanos</td>
+                            <td>$45.00</td>
+                            <td>$55.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Suspiro a la Limeña Clásico</td>
+                            <td>$65.00</td>
+                            <td>$65.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Suspiros a la Limeñia de Lúcuma</td>
+                            <td>$68.00</td>
+                            <td>$68.00</td>
+                        </tr>
+                            <tr>
+                            <td>25</td>
+                            <td>Vasos Clásicos 3 Leches</td>
+                            <td>$60.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Vasos de 3 Leches con Fresa, Durazno o Lúcuma</td>
+                            <td>$65.00</td>
+                            <td>$65.00</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <% } %>
+                <% if (selectedCategory && selectedCategory.toString() === '6') { %>
+                  <table>
+                    <thead>
+                        <tr>
+                            <th>QUANTITY</th>
+                            <th>TYPE</th>
+                            <th>SIMPLE</th>
+                            <th>PREMIUM</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25</td>
+                            <td>Empanaditas de Pollo o Carne</td>
+                            <td>$50.00</td>
+                            <td>$55.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Enrrolladitos de Hot Dog</td>
+                            <td>$50.00</td>
+                            <td>$58.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Hojarascas de Aji de Gallina</td>
+                            <td>$50.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Hojarascas de Atún y Mayonesa</td>
+                            <td>$50.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Causitas con Atún</td>
+                            <td>$55.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Causitas con Pollo</td>
+                            <td>$55.00</td>
+                            <td>$65.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Papitas Rellenas</td>
+                            <td>$55.00</td>
+                            <td>$65.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Papitas a la Huancaina </td>
+                            <td>$60.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Tequeños Rellenos de Jamon y Queso</td>
+                            <td>$50.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Croissant de Pollo y Mayonesa</td>
+                            <td>$50.00</td>
+                            <td>$50.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Croissant de Pollo, Apio y Mayonesa</td>
+                            <td>$58.00</td>
+                            <td>$58.00</td>
+                        </tr>
+                        <tr>
+                            <td>25</td>
+                            <td>Croissant de Pollo, Durazno y Pecanas</td>
+                            <td>$60.00</td>
+                            <td>$60.00</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Triples de Pollo, Jamon y Queso </td>
+                            <td>$50.00</td>
+                            <td>$58.00</td>
+                        </tr>
+                        <tr>
+                            <td>24</td>
+                            <td>Triples de Huevo, Palta y Tomate</td>
+                            <td>$50.00</td>
+                            <td>$58.00</td>
+                        </tr>
+                            <tr>
+                            <td>24</td>
+                            <td>Triples de Pollo, Jamon y Durazno</td>
+                            <td>$50.00</td>
+                            <td>$58.00</td>
+                        </tr>
+                    </tbody>
+                  </table>
+                <% } %>
+            </div>
+          </div>
+          
+            
+          </div>
+        </div>
+        <div id="pagination">
+          <div id="buttonsContainer">
+            <button id="prevBtn">Prev</button>
+            <button id="nextBtn">Next</button>
+          </div>
+          <span id="currentPage"></span>
+        </div>
+</body>
+
+<%- include('../../partial/principal/footer') %>
+
+<style>
+  body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+  }
+
+  table {
+      width: 90%;
+      border-collapse: collapse;
+      margin-top: 40px;
+      margin-bottom: 40px;
+      box-shadow: 0 2px 3px rgba(0,0,0,0.1);
+  }
+
+  th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+  }
+
+  th {
+      background-color: #c8a97e;
+  }
+
+  tr:nth-child(even) {
+      background-color: #f9f9f9;
+  }
+
+  tr:hover {
+      background-color: #FFD9E0;
+  }
+</style>
+<script>
+    window.addEventListener('load', function() {
+      var loader = document.getElementById('loader');
+      loader.style.display = 'none';
+    });
+  </script>
