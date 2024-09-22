@@ -42,19 +42,19 @@ img {
 .product-categories {
   border: 1px solid #e0e0e0;
   padding: 20px;
-  width: 250px;
+  width: 350px;
   background-color: #ffff;
   flex: 1;
   margin-right: 20px;
 }
 
 .product-categories h3 {
-  font-size: 20px;
+  font-size: 28px;
   font-weight: bold;
   margin-bottom: 15px;
   text-align: center;
   color: #c8a97e;
-  font-family: "Pacifico", cursive;
+  font-family: "Comic Neue", sans-serif;
 }
 
 .product-categories ul {
@@ -82,7 +82,7 @@ img {
 
 .product-categories ul li a {
   text-decoration: none;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   font-family: "Comic Neue", sans-serif;
   color: #555;
