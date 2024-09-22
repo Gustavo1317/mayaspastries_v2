@@ -92,11 +92,11 @@
 
   .section-content {
     text-align: center;
-    margin: 4rem 0;
+    margin: 7rem;
   }
   
   .section-content p {
-    font-size: 0.875rem;
+    font-size: 1.2rem;
   }
   
   .section-content h2 {
@@ -122,6 +122,29 @@
     width: 200px; 
     background-color: #fff2f5;
   }
+
+  .item--large {
+    grid-column: span 2;
+    grid-row: 1/2;
+    position: relative;
+    margin: 1rem;
+    padding: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 500px; 
+    background-color: #fff2f5;
+  }
+
+  @media (max-width: 500px) {
+    .item--large{
+        grid-column: 1 / -1; /* Ocupa toda la fila */
+        grid-row: 2 / 3;
+        width: 200px;
+    }
+  }
   
   .item img {
     width: 100%; /* Ajusta la imagen al ancho del contenedor */
@@ -137,6 +160,7 @@
   .item-info h3 {
     margin: 0.5rem 0;
     font-size: 1.25rem;
+    text-align: center;
   }
   
   .item-info p {
@@ -160,6 +184,29 @@
     opacity: 0;
     transform: translate(-50%, 30%);
     transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  .item--large .view-options {
+    position: absolute;
+    bottom: 50%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    background-color: #f9c8c7; /* Rosa pastel */
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.800rem;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transform: translate(-50%, 30%);
+    transition: opacity 0.3s ease, transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+  }
+  .item--large:hover .view-options {
+    opacity: 1;
+    transform: translate(-50%, 10%);
+    background-color: white;
+    color: black;
   }
   
   .item:hover .view-options {
@@ -391,7 +438,7 @@
     flex-direction: row;
     overflow: hidden;
     margin-bottom: 50px;
-    margin-top: 30px;
+    margin-top: 10px;
 
 }
 
@@ -410,6 +457,7 @@
 }
 
 .about__description {
+    padding-top: 35px;
     font-size: 1.6em;
     text-align: start;
     font-weight: normal;
@@ -536,7 +584,7 @@
 
 #letter {
     padding-top: 200px;
-    background: #f2f2f2;
+    background: #fff;
     width: 100%;
 }
 
@@ -704,20 +752,22 @@
 
 .faq-title {
     text-align: center;
+    font-weight: bold;
     color: #c8a97e;
     padding: 40px;
     padding-top: 160px;
-    font-family: "Pacifico", cursive;
+    font-family: "Comic Neue", sans-serif;
 }
 
 .faq-subtitle {
     color: #c8a97e;
+    font-weight: bold;
     border-bottom: 2px solid #c8a97e;
     padding-bottom: 10px;
     margin-bottom: 20px;
     margin-right: 30px;
     margin-left: 30px;
-    font-family: "Pacifico", cursive;
+    font-family: "Comic Neue", sans-serif;
 }
 
 .faq__list {

@@ -441,8 +441,8 @@
   top: -50px;
   left: 0;
   right: 0;
-  font-weight: normal;
-  font-size: 50px;
+  font-weight: bold;
+  font-size: 44px;
   display: block;
   margin-bottom: 0;
   color: rgba(0, 0, 0, 0.2);
@@ -450,7 +450,7 @@
   line-height: 1;
   margin-top: 0;
   z-index: -1;
-  font-family: "Pacifico", cursive;
+  font-family: "Comic Neue", sans-serif;
 }
 
 
