@@ -241,11 +241,11 @@
   }
 
 .logo-text {
-    font-size: 36px; /* Ajusta el tamaño de la fuente según sea necesario */
+    font-size: 44px; /* Ajusta el tamaño de la fuente según sea necesario */
     font-weight: bold; /* Hace el texto en negrita */
     color: #333; /* Ajusta el color del texto */
     text-decoration: none; /* Elimina el subrayado del enlace */
-    font-family: "Montserrat", sans-serif; /* Cambia 'YourFontFamily' por la fuente que desees usar */
+    font-family: "Playball", cursive ; /* Cambia 'YourFontFamily' por la fuente que desees usar */
     text-align: center;
     margin: 0 10px;
 }
@@ -583,7 +583,7 @@
 }
 
 #letter {
-    padding-top: 200px;
+    padding-top: 70px;
     background: #fff;
     width: 100%;
 }

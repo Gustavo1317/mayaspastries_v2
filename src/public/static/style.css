@@ -434,6 +434,7 @@
 
 .heading-section {
   position: relative;
+  place-items: center;
 }
 
 .heading-section .subheading {
@@ -442,6 +443,7 @@
   left: 0;
   right: 0;
   font-weight: bold;
+  text-align: center;
   font-size: 44px;
   display: block;
   margin-bottom: 0;
